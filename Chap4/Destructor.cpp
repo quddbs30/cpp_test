@@ -4,8 +4,7 @@
 #define BY07_TEST
 using namespace std;
 /******************************
- * by07.so TIP
- * 소멸자는 대게 생성자에서 할당한 리소스의 소멸에 사용된다.
+ * by07.so TIP 소멸자는 대개 생성자에서 할당한 리소스의 소멸에 사용된다.
  * 객체 소멸 과정에서 자동으로 처리돼야 할 일을 기술한다. 
 **********************************/
 class Person
@@ -15,7 +14,9 @@ class Person
     int age;
 
   public:
-    // by07.so NOTE 문자열 상수를 전달받으므로 const 로 선언돼야 한다.(책에는 없었음. warning 발생.)
+    /**********************
+     * by07.so NOTE 문자열 상수를 전달받으므로 const 로 선언돼야 한다.(책에는 없었음. warning 발생.)
+     *************/
     Person(const char *myname, int myage)
     {
         int len = strlen(myname) + 1;
@@ -38,8 +39,7 @@ class Person
 int main(void)
 {
  /******************************
- * by07.so TIP
- * 객체 생성 방법에 따라 소멸자 호출 여부가 달라진다.
+ * by07.so TIP 객체 생성 방법에 따라 소멸자 호출 여부가 달라진다.
  ******/
 #ifdef BY07_TEST
     Person *man1 = new Person("Lee dong woo", 24);

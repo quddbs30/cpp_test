@@ -10,8 +10,7 @@ class SoSimple
 
   public:
   /*************
-   * by07.so TIP 
-   * member initializer 를 사용하여 멤버변수를 초기화하고 있다.
+   * by07.so TIP member initializer 를 사용하여 멤버변수를 초기화하고 있다.
    ***************/
     SoSimple(int n) : num(n)
     {

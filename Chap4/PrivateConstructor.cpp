@@ -3,8 +3,7 @@
 #define BY07_TEST
 using namespace std;
 /******************************
- * by07.so TIP
- * private 생성자는 객체의 생성방법을 
+ * by07.so TIP private 생성자는 객체의 생성방법을 
  * 제한하고자 하는 경우 유용하게 사용된다.
 **********************************/
 class AAA 
@@ -13,14 +12,14 @@ class AAA
     int num;
 
   public:
-    /*** by07.so TODO
-     * 아래와 같은 구문은 무슨 의미인지? 
+    /******************
+     * by07.so TODO 아래와 같은 구문은 무슨 의미인지? 
      * func1() : num(0) {}
      *****/
     AAA() : num(0) {}
 
-    /*** by07.so TODO
-     * static 과 const 는 함께 사용되지 못 한다. 
+    /*******************
+     * by07.so TODO static 과 const 는 함께 사용되지 못 한다. 
      * 왜 그런지?? static 과 const 의 정확한 의미를 알아야 한다.
      ******/
 #ifdef BY07_TEST

@@ -11,6 +11,9 @@ class SelfRef
     {
         cout << "객체생성" << endl;
     }
+    /************
+     *  by07.so TODO 참조자형 반환을 위해 this가 아닌 *this 를 사용하는 이유???
+    *****/ 
     SelfRef &Adder(int n)
     {
         num += n;
