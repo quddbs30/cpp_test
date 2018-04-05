@@ -12,10 +12,6 @@ class AAA
     int num;
 
   public:
-    /******************
-     * by07.so TODO 아래와 같은 구문은 무슨 의미인지? 
-     * func1() : num(0) {}
-     *****/
     AAA() : num(0) {}
 
     /*******************
@@ -23,7 +19,7 @@ class AAA
      * 왜 그런지?? static 과 const 의 정확한 의미를 알아야 한다.
      ******/
 #ifdef BY07_TEST
-    static AAA &CreateInitObj(int n)
+    static AAA &CreateInitObj(int n) // const
 #else
     AAA &CreateInitObj(int n) const
 #endif
