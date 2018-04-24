@@ -2,7 +2,6 @@
 // http://cafe.naver.com/myprogramming/16048
 // http://cafe.naver.com/multism/6805
 
-
 #include <iostream>
 using namespace std;
 
