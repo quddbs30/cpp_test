@@ -1,6 +1,6 @@
 
 /**************
- * by07.so NOTE strategy pattern
+ * by07.so TIP strategy pattern
  *              '고전적인, 표준적인' strategy pattern 은 p.265 참조
  *************/
 #include <iostream>
@@ -54,5 +54,6 @@ int main(void)
     cout << ebg1.healthValue() << endl;
     cout << ebg2.healthValue() << endl;
 //find()
+    cout << ebg1.healthValue() << endl;
     return 0;
 }

@@ -9,10 +9,18 @@ typedef struct t_data
     char name[10];
     int age;
 
-    bool operator==(const struct t_data &other)
+    bool operator==(const struct t_data &other) const
     {
         if ((0 == strcmp(name, other.name)) &&
             age == other.age)
+            return true;
+        else
+            return false;
+    }
+
+    bool operator==(const char *other_name) const
+    {
+        if (0 == strcmp(name, other_name))
             return true;
         else
             return false;
@@ -32,12 +40,18 @@ int main(void)
     lTemp.push_back(d3);
 
     tData tt = {"d2", 2};
-
     /*********************
      * by07.so TIP List 에서 특정 원소를 탐색할 때 아래와 같이 하면 된다.
      *******************/
-    if (find(lTemp.begin(), lTemp.end(), tt) != lTemp.end())
-        cout << "got it " << endl;
+
+    list<tData>::iterator lTempIt;
+    if ((lTempIt = find(lTemp.begin(), lTemp.end(), tt)) != lTemp.end())
+        cout << "got it " << lTempIt->name << " " << lTempIt->age << endl;
+    else
+        cout << "not saved " << endl;
+
+    if ((lTempIt = find(lTemp.begin(), lTemp.end(), "d3")) != lTemp.end())
+        cout << "got it " << lTempIt->name << " " << lTempIt->age << endl;
     else
         cout << "not saved " << endl;
 
