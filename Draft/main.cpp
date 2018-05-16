@@ -1,3 +1,18 @@
+#if 1
+#include <iostream>
+#include "IpAddrHandler.h"
+#include "IpsecTunnHandler.h"
+using namespace std;
+
+int main(void)
+{
+    AConfDbHandler<tIpsecTunnConf> &rIpsecInstance = IpsecTunnHandler::getInstance();
+    AConfDbHandler<tIpAddrConf> &rIpAddrInstance = IpAddrHandler::getInstance();
+
+
+    return 0;
+}
+#else
 #include <iostream>
 #include "Person.h"
 using namespace std;
@@ -32,3 +47,4 @@ int main(void)
 
     return 0;
 }
+#endif
