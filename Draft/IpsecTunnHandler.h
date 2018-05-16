@@ -4,27 +4,6 @@
 #include "AConfDbHandler.h"
 using namespace std;
 
-typedef struct ipsectunnconf
-{
-    string ifName1;
-    string ifName2;
-    string ifName3;
-    int num;
-
-    bool operator==(const int other_num) const
-    {
-        if (num == other_num) return true;
-        else                  return false;
-    }
-    bool operator==(const string other_ifname) const
-    {
-        if ((ifName1 == other_ifname) ||
-            (ifName2 == other_ifname) ||
-            (ifName3 == other_ifname))   return true;
-        else                             return false;
-    }
-} tIpsecTunnConf;
-
 class IpsecTunnHandler : public AConfDbHandler<tIpsecTunnConf>
 {
   public:
@@ -33,6 +12,8 @@ class IpsecTunnHandler : public AConfDbHandler<tIpsecTunnConf>
         static IpsecTunnHandler _instance;
         return _instance;
     }
+
+    virtual void test() { rDataBase.test(); }
 
   private:
     IpsecTunnHandler() { cout << "ipsec tunn constructor!! " << endl; }

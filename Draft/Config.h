@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iostream>
 #include <list>
+using namespace std;
 
 /*********************
  * by07.so NOTE 이 파일과는 상관없지만, ISM 구현에 필요한 내용임.
@@ -11,8 +12,6 @@
  *  즉, 아직 초기화되지 않은 상태에서 이를 사용하게 될 수도 있으므로 변경할 필요가 있다.
  *  함수를 통해(local static object) 반환받도록 변경해야 한다.
  *********************/
-
-using namespace std;
 
 template <typename CONFTYPE>
 class Config

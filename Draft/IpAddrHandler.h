@@ -4,24 +4,6 @@
 #include "AConfDbHandler.h"
 using namespace std;
 
-typedef struct ipaddrconf
-{
-    string ifName;
-    string address;
-    int num;
-
-    bool operator==(const int other_num) const
-    {
-        if (num == other_num) return true;
-        else                  return false;
-    }
-    bool operator==(const string other_ifname) const
-    {
-        if (ifName == other_ifname) return true;
-        else                        return false;
-    }
-} tIpAddrConf;
-
 class IpAddrHandler : public AConfDbHandler<tIpAddrConf>
 {
   public:
@@ -30,6 +12,8 @@ class IpAddrHandler : public AConfDbHandler<tIpAddrConf>
         static IpAddrHandler _instance;
         return _instance;
     }
+
+    virtual void test() { rDataBase.test(); }
 
   private:
     IpAddrHandler() { cout << "ip addr constructor!! " << endl; }
