@@ -15,13 +15,11 @@ class DataBasePld : public ADataBase
     virtual void test(void);
 
   private:
+    virtual void setDbIdMap(void);
+
+  private:
     DataBasePld() { cout << "DataBasePld constructor!!" << endl; }
     DataBasePld(DataBasePld const &);
     void operator=(DataBasePld const &);
 };
-
-void DataBasePld::test(void)
-{
-    cout << "In test() of PLD!!" << endl;
-}
 #endif /* __DATABASEPLD_H__ */

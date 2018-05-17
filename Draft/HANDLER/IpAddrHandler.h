@@ -13,10 +13,10 @@ class IpAddrHandler : public AConfDbHandler<tIpAddrConf>
         return _instance;
     }
 
-    virtual void test() { rDataBase.test(); }
+    virtual void test();
 
   private:
-    IpAddrHandler() { cout << "ip addr constructor!! " << endl; }
+    IpAddrHandler();
     IpAddrHandler(IpAddrHandler const&);
     void operator=(IpAddrHandler const&);
 };

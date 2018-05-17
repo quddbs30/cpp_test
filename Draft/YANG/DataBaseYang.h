@@ -15,13 +15,11 @@ class DataBaseYang : public ADataBase
     virtual void test(void);
 
   private:
+    virtual void setDbIdMap(void);
+
+  private:
     DataBaseYang() { cout << "DataBaseYang constructor!!" << endl; }
     DataBaseYang(DataBaseYang const &);
     void operator=(DataBaseYang const &);
 };
-
-void DataBaseYang::test(void)
-{
-    cout << "In test() of YANG!!" << endl;
-}
 #endif /* __DATABASEYANG_H__ */

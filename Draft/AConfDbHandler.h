@@ -9,33 +9,38 @@
 
 #define DB_TYPE_PLD     0
 #define DB_TYPE_YANG    1
-int getDbType()
-{
-    /* by07.so type 에 할당하기 위한 함수 정의 필요. 
-       해당 함수는 실행 환경(FOO 등..)에 따라 반환한다. */
-    //static int type = DB_TYPE_PLD;
-    static int type = DB_TYPE_YANG;
-    return type;
-}
 
-ADataBase &getDataBase(void)
+class DbType
 {
-    switch (getDbType())
+  public:
+    static int getDbType()
     {
+        /* by07.so type 에 할당하기 위한 함수 정의 필요. 
+       해당 함수는 실행 환경(FOO 등..)에 따라 반환한다. */
+        static int type = DB_TYPE_PLD;
+        //static int type = DB_TYPE_YANG;
+        return type;
+    }
+
+    static ADataBase &getDataBase(void)
+    {
+        switch (getDbType())
+        {
         case DB_TYPE_YANG:
             return DataBaseYang::getInstance();
         case DB_TYPE_PLD:
         default:
             return DataBasePld::getInstance();
+        }
     }
-}
+};
 
 template <typename CONFTYPE>
 class AConfDbHandler
 {
   public:
     AConfDbHandler()
-        : rConfig(Config<CONFTYPE>::getInstance()), rDataBase(getDataBase()) {}
+        : rConfig(Config<CONFTYPE>::getInstance()), rDataBase(DbType::getDataBase()) {}
     virtual ~AConfDbHandler() {}
 
   public:

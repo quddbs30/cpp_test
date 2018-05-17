@@ -13,10 +13,10 @@ class IpsecTunnHandler : public AConfDbHandler<tIpsecTunnConf>
         return _instance;
     }
 
-    virtual void test() { rDataBase.test(); }
+    virtual void test();
 
   private:
-    IpsecTunnHandler() { cout << "ipsec tunn constructor!! " << endl; }
+    IpsecTunnHandler();
     IpsecTunnHandler(IpsecTunnHandler const&);
     void operator=(IpsecTunnHandler const&);
 };

@@ -1,4 +1,6 @@
 
+
+// g++ -I./ -I./PLD -I./YANG -I./HANDLER main.cpp YANG/*.cpp PLD/*.cpp HANDLER/*.cpp
 /* ConfigManager class */
 /* ConfigManager class */
 #if 1
