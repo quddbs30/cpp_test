@@ -2,6 +2,8 @@
 #define __IPADDRHANDLER_H__
 #include <iostream> 
 #include "AConfDbHandler.h"
+#include "PldIpAddr.h"
+#include "YangIpAddr.h"
 using namespace std;
 
 class IpAddrHandler : public AConfDbHandler<tIpAddrConf>
@@ -14,6 +16,9 @@ class IpAddrHandler : public AConfDbHandler<tIpAddrConf>
     }
 
     virtual void test();
+
+  private:
+    virtual void setDataBase(void);
 
   private:
     IpAddrHandler();

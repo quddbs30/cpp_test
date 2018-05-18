@@ -2,6 +2,8 @@
 #define __IPSECTUNNHANDLER_H__
 #include <iostream> 
 #include "AConfDbHandler.h"
+#include "PldIpsecTunn.h"
+#include "YangIpsecTunn.h"
 using namespace std;
 
 class IpsecTunnHandler : public AConfDbHandler<tIpsecTunnConf>
@@ -14,6 +16,9 @@ class IpsecTunnHandler : public AConfDbHandler<tIpsecTunnConf>
     }
 
     virtual void test();
+
+  private:
+    virtual void setDataBase(void);
 
   private:
     IpsecTunnHandler();

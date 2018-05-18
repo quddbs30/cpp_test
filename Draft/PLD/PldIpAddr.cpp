@@ -1,13 +1,13 @@
 #include <iostream>
-#include "DataBasePld.h"
+#include "PldIpAddr.h"
 using namespace std;
 
-void DataBasePld::test(void)
+void PldIpAddr::test(void)
 {
     cout << "In test() of PLD!!" << endl;
 }
 
-void DataBasePld::setDbIdMap(void)
+void PldIpAddr::setDbIdMap(void)
 {
     cout << "In setDbIdMap() of PLD!!" << endl;
 }

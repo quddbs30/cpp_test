@@ -1,13 +1,13 @@
 #include <iostream>
-#include "DataBaseYang.h"
+#include "YangIpsecTunn.h"
 using namespace std;
 
-void DataBaseYang::test(void)
+void YangIpsecTunn::test(void)
 {
     cout << "In test() of YANG!!" << endl;
 }
 
-void DataBaseYang::setDbIdMap(void)
+void YangIpsecTunn::setDbIdMap(void)
 {
     cout << "In setDbIdMap() of YANG!!" << endl;
 }

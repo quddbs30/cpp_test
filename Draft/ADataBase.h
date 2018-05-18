@@ -1,9 +1,11 @@
 #ifndef __ADATABASE_H__
 #define __ADATABASE_H__
 #include <iostream>
+#include "configStruct.h"
 #include "DataBaseId.h"
 using namespace std;
 
+template <typename CONFTYPE>
 class ADataBase
 {
   public:
