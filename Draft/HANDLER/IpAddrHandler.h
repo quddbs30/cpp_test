@@ -12,6 +12,7 @@ class IpAddrHandler : public AConfDbHandler<tIpAddrConf>
     static IpAddrHandler &getInstance()
     {
         static IpAddrHandler _instance;
+        _instance.setDataBase();
         return _instance;
     }
 

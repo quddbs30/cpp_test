@@ -4,7 +4,7 @@
 #include "ADataBase.h"
 using namespace std;
 
-class YangIpsecTunn : public ADataBase<tIpsecTunnConf>
+class YangIpsecTunn : public ADataBase
 {
   public:
     static YangIpsecTunn *getInstance()

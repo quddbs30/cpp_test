@@ -4,7 +4,7 @@
 #include "ADataBase.h"
 using namespace std;
 
-class PldIpsecTunn : public ADataBase<tIpsecTunnConf>
+class PldIpsecTunn : public ADataBase
 {
   public:
     static PldIpsecTunn *getInstance()

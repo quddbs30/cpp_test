@@ -12,6 +12,7 @@ class IpsecTunnHandler : public AConfDbHandler<tIpsecTunnConf>
     static IpsecTunnHandler &getInstance()
     {
         static IpsecTunnHandler _instance;
+        _instance.setDataBase();
         return _instance;
     }
 

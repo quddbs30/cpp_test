@@ -5,7 +5,6 @@ using namespace std;
 IpsecTunnHandler::IpsecTunnHandler()
 {
     cout << "ipsec tunn constructor!! " << endl;
-    setDataBase();
 }
 
 void IpsecTunnHandler::test()
@@ -15,6 +14,7 @@ void IpsecTunnHandler::test()
 
 void IpsecTunnHandler::setDataBase(void)
 {
+    // by07.so ConfigManager::getDbType() 으로 변경해야 함.
     switch (getDbType())
     {
     case DB_TYPE_YANG:

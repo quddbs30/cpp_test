@@ -13,16 +13,21 @@ class AConfDbHandler
         : rConfig(Config<CONFTYPE>::getInstance()), pDataBase(NULL) {}
     virtual ~AConfDbHandler() {}
 
-  public:
-    virtual void test(void) = 0;
-
   protected:
     Config<CONFTYPE> &rConfig;
-    ADataBase<CONFTYPE> *pDataBase;
+    ADataBase *pDataBase;
+#if 1
+    // by07.so ConfigManager class 로 옮겨야 함.
     int getDbType(void) const;
+#endif
     virtual void setDataBase(void) = 0;
+
+  public:
+    virtual void test(void) = 0;
 };
 
+#if 1 
+// by07.so ConfigManager class 로 옮겨야 함.
 #define DB_TYPE_PLD     0
 #define DB_TYPE_YANG    1
 template <typename CONFTYPE>
@@ -37,4 +42,5 @@ int AConfDbHandler<CONFTYPE>::getDbType(void) const
 #endif
     return type;
 }
+#endif // by07.so ConfigManager class 로 옮겨야 함.
 #endif /* __ACONFDBHANDLER_H__ */

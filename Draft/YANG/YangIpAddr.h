@@ -4,7 +4,7 @@
 #include "ADataBase.h"
 using namespace std;
 
-class YangIpAddr : public ADataBase<tIpAddrConf>
+class YangIpAddr : public ADataBase
 {
   public:
     static YangIpAddr *getInstance()

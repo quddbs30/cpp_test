@@ -5,7 +5,6 @@
 #include "DataBaseId.h"
 using namespace std;
 
-template <typename CONFTYPE>
 class ADataBase
 {
   public:

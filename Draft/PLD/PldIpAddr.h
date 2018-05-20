@@ -4,7 +4,7 @@
 #include "ADataBase.h"
 using namespace std;
 
-class PldIpAddr : public ADataBase<tIpAddrConf>
+class PldIpAddr : public ADataBase
 {
   public:
     static PldIpAddr *getInstance()
